@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+
+      <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
+
+        <div class="text-center">
+          <h2>LOGIN</h2>
+          <p class="text-secondary">Please enter your credentials</p>
+        </div>
+
+        <div class="p-1">
+          <div class="error-message" *ngIf="submitted">
+            <p><i class="bi bi-info-circle"></i> Please enter a correct national ID/password</p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username" class="form-label">National/Iqama ID</label>
+          <input type="number" formControlName="username" class="form-control" placeholder="Enter your National ID"
+            [ngClass]="{ 'error': logForm.get('username')?.invalid && logForm.get('username')?.touched}">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control" placeholder="*********"
+            [ngClass]="{ 'error': logForm.get('password')?.invalid && logForm.get('password')?.touched}">
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+          <a href="#" class="text-decoration-none">Forgot password</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+          Sign in <i class="bi bi-box-arrow-in-right"></i> </button>
+
+      </form>
+
+    </div>
+
+    <div class="col-md-6 d-flex align-items-center justify-content-center gradient">
+      <img src="assets/logo.png" alt="Tahakom Logo" class="img-fluid">
+    </div>
+
+  </div>
+</div>
