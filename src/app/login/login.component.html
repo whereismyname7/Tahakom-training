@@ -17,7 +17,7 @@
 
         <div class="mb-3">
           <label for="username" class="form-label">National/Iqama ID</label>
-          <input type="number" formControlName="username" class="form-control" placeholder="Enter your National ID"
+          <input type="text" formControlName="username" class="form-control" placeholder="Enter your National ID"
             [ngClass]="{ 'error': logForm.get('username')?.invalid && logForm.get('username')?.touched}">
         </div>
 
