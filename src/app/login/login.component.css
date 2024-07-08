@@ -75,3 +75,12 @@ transition: all 0.3s ease;
 
 }
 
+[dir='rtl'] .form-check-input {
+  position: relative; 
+  left: 88%;
+
+}
+
+[dir='rtl']  a{
+  right: 68%;
+}

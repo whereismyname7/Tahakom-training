@@ -1,0 +1,25 @@
+[dir='rtl'] button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+  }
+  
+  [dir='ltr'] button {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+  }
+  
+  .btn-secondary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #31BFB7;
+    border-color: #31BFB7;
+    border-radius: 12px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #497284;
+    border-color: #497284;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }

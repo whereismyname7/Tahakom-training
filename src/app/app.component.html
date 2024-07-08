@@ -1,1 +1,13 @@
-<router-outlet />
+<div class="lang-container">
+    <div [dir]="translate.currentLang === 'ar' ? 'rtl' : 'ltr'">
+        <div *ngIf="showLanguageButtons()">
+        <button class="btn btn-secondary" *ngIf="translate.currentLang == 'ar'" (click)="switchLang('en')">English <i
+                class="bi bi-globe2"></i></button>
+        <button class="btn btn-secondary" *ngIf="translate.currentLang == 'en'" (click)="switchLang('ar')">عربي <i
+                class="bi bi-globe2"></i></button>
+        </div>
+
+
+        <router-outlet></router-outlet>
+    </div>
+</div>
