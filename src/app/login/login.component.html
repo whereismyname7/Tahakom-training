@@ -5,36 +5,37 @@
       <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
 
         <div class="text-center">
-          <h2>LOGIN</h2>
-          <p class="text-secondary">Please enter your credentials</p>
+          <h2>{{ "LOGIN" | translate }}</h2>
+          <p class="text-secondary">{{ "PLEASE_ENTER_YOUR_CREDENTIALS" | translate }}</p>
         </div>
 
         <div class="p-1">
-          <div class="error-message" *ngIf="submitted">
-            <p><i class="bi bi-info-circle"></i> Please enter a correct national ID/password</p>
+          <div class="error-message" *ngIf="submitted && showErrorMessage">
+            <p><i class="bi bi-info-circle"></i>{{ "PLEASE_ENTER_A_CORRECT_NATIONAL_ID/PASSWORD" | translate }}</p>
           </div>
         </div>
 
         <div class="mb-3">
-          <label for="username" class="form-label">National/Iqama ID</label>
-          <input type="text" formControlName="username" class="form-control" placeholder="Enter your National ID"
+          <label for="username" class="form-label" translate>{{"NATIONAL/IQAMA_ID" | translate}}</label>
+          <input type="text" id="username" formControlName="username" class="form-control" placeholder="{{ 'ENTER_YOUR_NATIONAL/IQAMA_ID' | translate }}"
             [ngClass]="{ 'error': logForm.get('username')?.invalid && logForm.get('username')?.touched}">
         </div>
 
         <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" formControlName="password" class="form-control" placeholder="*********"
+          <label for="password" class="form-label" translate>{{"PASSWORD" | translate}}</label>
+          <input type="password" id="password" formControlName="password" class="form-control" placeholder="*********"
             [ngClass]="{ 'error': logForm.get('password')?.invalid && logForm.get('password')?.touched}">
         </div>
 
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="rememberMe">
-          <label class="form-check-label" for="rememberMe">Remember me</label>
-          <a href="#" class="text-decoration-none">Forgot password</a>
+          <label class="form-check-label" for="rememberMe">{{"REMEMBER_ME" | translate}}</label>
+          <a href="#" class="text-decoration-none">{{"FORGOT_PASSWORD" | translate}}</a>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">
-          Sign in <i class="bi bi-box-arrow-in-right"></i> </button>
+          {{"SIGN_IN" | translate}} <i class="bi bi-box-arrow-in-right"></i>
+        </button>
 
       </form>
 

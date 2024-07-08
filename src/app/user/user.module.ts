@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { HomeComponent } from '../home/home.component';
-
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -18,6 +18,7 @@ import { HomeComponent } from '../home/home.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    TranslateModule,
   ]
 })
 export class UserModule { }
