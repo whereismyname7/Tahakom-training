@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+
+      <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
+
+        <div class="text-center">
+          <h2>{{ "LOGIN" | translate }}</h2>
+          <p class="text-secondary">{{ "PLEASE_ENTER_YOUR_CREDENTIALS" | translate }}</p>
+        </div>
+
+        <div class="p-1">
+          <div class="error-message" *ngIf="submitted && showErrorMessage">
+            <p><i class="bi bi-info-circle"></i>{{ "PLEASE_ENTER_A_CORRECT_NATIONAL_ID/PASSWORD" | translate }}</p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username" class="form-label" translate>{{"NATIONAL/IQAMA_ID" | translate}}</label>
+          <input type="text" id="username" formControlName="username" class="form-control" placeholder="{{ 'ENTER_YOUR_NATIONAL/IQAMA_ID' | translate }}"
+            [ngClass]="{ 'error': logForm.get('username')?.invalid && logForm.get('username')?.touched}">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label" translate>{{"PASSWORD" | translate}}</label>
+          <input type="password" id="password" formControlName="password" class="form-control" placeholder="*********"
+            [ngClass]="{ 'error': logForm.get('password')?.invalid && logForm.get('password')?.touched}">
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">{{"REMEMBER_ME" | translate}}</label>
+          <a href="#" class="text-decoration-none">{{"FORGOT_PASSWORD" | translate}}</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+          {{"SIGN_IN" | translate}} <i class="bi bi-box-arrow-in-right"></i>
+        </button>
+
+      </form>
+
+    </div>
+
+    <div class="col-md-6 d-flex align-items-center justify-content-center gradient">
+      <img src="assets/logo.png" alt="Tahakom Logo" class="img-fluid">
+    </div>
+
+  </div>
+</div>
