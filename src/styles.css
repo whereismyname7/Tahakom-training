@@ -2,13 +2,11 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
-[dir="rtl"] {
-    direction: rtl;
-    text-align: right;
-  }
-  
-  [dir="ltr"] {
-    direction: ltr;
-    text-align: left;
-  }
+html[lang="ar"] body {
+  direction: rtl;
+}
+
+html[lang="en"] body {
+  direction: ltr;
+}
   

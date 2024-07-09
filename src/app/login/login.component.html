@@ -28,13 +28,16 @@
             [ngClass]="{ 'error': logForm.get('password')?.invalid && logForm.get('password')?.touched}">
         </div>
 
-        <div class="mb-3 form-check" [dir]="translate.currentLang === 'ar' ? 'rtl' : 'ltr'">
-          <input type="checkbox" class="form-check-input" id="rememberMe">
-          <label class="form-check-label" for="rememberMe">{{ "REMEMBER_ME" | translate }}</label>
-          <a href="#" class="text-decoration-none">{{ "FORGOT_PASSWORD" | translate }}</a>
+
+        <div class="mb-3 d-flex justify-content-between">
+          <div class="col d-flex align-items-center">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label px-2" for="rememberMe">{{ "REMEMBER_ME" | translate }}</label>
+          </div>
+          <div class="col text-end">
+            <a href="#" class="text-decoration-none">{{ "FORGOT_PASSWORD" | translate }}</a>
+          </div>
         </div>
-        
-        
 
         <button type="submit" class="btn btn-primary w-100">
           {{"SIGN_IN" | translate}} <i class="bi bi-box-arrow-in-right"></i>

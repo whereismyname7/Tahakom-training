@@ -27,7 +27,7 @@ export class AppComponent {
     const currentLang = this.translate.currentLang;
     const newLang = currentLang === 'ar' ? 'en' : 'ar';
     this.translate.use(newLang);
-    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
-  }
+    document.documentElement.setAttribute('lang',newLang) 
+   }
   
 }
