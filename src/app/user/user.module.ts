@@ -6,8 +6,6 @@ import { LoginComponent } from '../login/login.component';
 import { HomeComponent } from '../home/home.component';
 import { TranslateModule } from '@ngx-translate/core';
 
-
-
 @NgModule({
   declarations: [
     LoginComponent,
@@ -19,6 +17,7 @@ import { TranslateModule } from '@ngx-translate/core';
     ReactiveFormsModule,
     RouterModule,
     TranslateModule,
-  ]
+  ],
+
 })
 export class UserModule { }
