@@ -19,11 +19,15 @@ export class AppComponent {
     this.translate.use(browserLang && browserLang.match(/en|ar/) ? browserLang : 'en');
   }
 
-  showLanguageButtons(): boolean {
+  get showLanguageButtons(): boolean {
     return this.router.url == '/'; 
   }
 
-  switchLang(lang: string) {
-    this.translate.use(lang);
+  switchLang() {
+    const currentLang = this.translate.currentLang;
+    const newLang = currentLang === 'ar' ? 'en' : 'ar';
+    this.translate.use(newLang);
+    document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
   }
+  
 }
