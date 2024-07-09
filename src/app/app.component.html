@@ -1,7 +1,7 @@
 <div class="lang-container">
     <div [dir]="translate.currentLang === 'ar' ? 'rtl' : 'ltr'">
         <div *ngIf="showLanguageButtons">
-        <button class="btn btn-secondary" (click)="switchLang()">{{"LANGUAGE"| translate}} <i
+        <button class="btn btn-secondary pos mx-2" (click)="switchLang()">{{"LANGUAGE"| translate}} <i
                 class="bi bi-globe2"></i></button>
         </div>
 
